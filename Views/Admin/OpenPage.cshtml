@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "OpenPage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+ 
+@{ 
+ string emailAddress = @User.Identity?.Name!;
+ string name1 = System.Text.RegularExpressions.Regex.Match(emailAddress, "^[A-Za-z]+").Value;
+}
+
+<div class="shilat" style="height: 650px">
+    <div class="banner-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-content text-center">
+                        <br />
+                        <span>@*<i class="icon icon-calendar mr-2"></i>*@ADMIN</span>
+                        <h2 class="colored">Hello @name1</h2>
+
+                        <div class="breadcum-items mt-2">
+                            @*      <span class="item color-primary" style="font-size: 15px;"><a asp-action="Home">Home /</a></span>
+                            <span class="item color-primary" style="font-size: 15px;">Flavors</span>
+
+                            *@
+                            <span class="item colored" style=" font-size: 17px;">Home</span>
+
+                        </div>
+                        <br />
+                      
+                        <span class="item" style="font-size: 23px;">
+                            Welcome, Ice Cream Maestro!<br>
+                            You've just stepped into the realm of ice cream creativity and management.<br>
+                            This is your canvas to craft delightful frozen creations, manage the scoop of promotions,<br>
+                            orchestrate orders, and even glimpse into the future of ice cream sales.<br>
+                            The sweet journey begins now; let's shape the world of ice cream together!
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--site-banner-->

@@ -1,0 +1,415 @@
+﻿@model IEnumerable<WebApplicationIceCreamProject.Models.IceCream>
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_BasicLayout.cshtml";
+}
+
+      
+
+<section id="billboard">
+    <div class="main-slider">
+        <!-- Your slider items here -->
+
+        <div class="slider-item">
+
+            <figure>
+                <img src="images/banner3.jpg" style="width: 100%;">
+            </figure>
+
+            <div class="text-content col-md-8">
+                <span>- CHILL OUT WITH US</span>
+                <h2 class="text-uppercase colored padding-xsmall"><a href="#">Chill and Savor the Sweetness</a></h2>
+                <p>Join us for a cool adventure into the world of ice cream. Our delectable treats are the perfect way to beat the heat and make every moment delightful.</p>
+                <div class="pix_btn">
+                    <a asp-action="Shop" class="btn-hvr-effects mt-3">View Menu</a>
+                </div>
+            </div><!--content-box-->
+
+
+        </div><!--slider-item-->
+
+        <div class="slider-item">
+
+            <figure>
+                <img src="images/banner5.jpg" style="width: 100%;">
+            </figure>
+
+            <div class="text-content col-md-8">
+                <span>- INDULGE IN SWEET DELIGHTS</span>
+                <h2 class="text-uppercase colored padding-xsmall"><a href="#">Irresistible Ice Cream Creations</a></h2>
+                <p>Experience the joy of our handcrafted ice cream delights, lovingly made to satisfy your cravings. From classic flavors to unique creations, there's something for everyone.</p>
+                <div class="pix_btn">
+                    <a asp-action="Shop" class="btn-hvr-effects mt-3">Discover Flavors</a>
+                </div>
+            </div><!--content-box-->
+
+
+        </div><!--slider-item-->
+
+        <div class="slider-item">
+
+            <figure>
+                <img src="images/banner4.jpg" style="width: 100%;">
+            </figure>
+
+            <div class="text-content col-md-8">
+                <span>- FRESHLY CRAFTED EVERY DAY</span>
+                <h2 class="text-uppercase colored padding-xsmall"><a href="#">Delicious Ice Cream Treats</a></h2>
+                <p>Indulge in our delightful selection of ice cream flavors, made fresh every day. Perfect for satisfying your sweet cravings on any occasion.</p>
+                <div class="pix_btn">
+                    <a asp-action="Shop" class="btn-hvr-effects mt-3">Explore Menu</a>
+                </div>
+            </div><!--content-box-->
+        </div><!--slider-item-->
+    </div>
+</section>
+<!-- Initialize the Slick Carousel -->
+<script>
+    $(document).ready(function () {
+        $('.main-slider').slick({
+            // Slick Carousel options and settings go here
+            // For example:
+            // autoplay: true,
+            // dots: true,
+            // arrows: true,
+        });
+    });
+</script>
+<!--<section id="billboard">
+    <div class="main-slider">-->
+<!--</div>--><!--slider-->
+<!--</section>-->
+
+<section class="about-us margin-medium">
+    <div class="container">
+        <div class="row">
+            <div class="nav-tabs-wrap products-tab">
+
+                <h2 class="section-title text-center">About Us</h2>
+
+                @* <nav>
+                    <div class="nav nav-tabs padding-small text-hover" id="nav-tab" role="tablist">
+                        <a class="nav-link active" id="nav-missions-tab" data-bs-toggle="tab" data-bs-target="#nav-missions" role="tab" aria-controls="nav-missions" aria-selected="true">Our Missions</a>
+                        <a class="nav-link" id="nav-values-tab" data-bs-toggle="tab" data-bs-target="#nav-values" role="tab" aria-controls="nav-values" aria-selected="false">
+                            Our Values
+                        </a>
+                        <a class="nav-link" id="nav-goals-tab" data-bs-toggle="tab" data-bs-target="#nav-goals" role="tab" aria-controls="nav-goals" aria-selected="false">Our Goals</a>
+                    </div>
+                </nav> *@
+
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" role="tabpanel" id="nav-missions" aria-labelledby="nav-missions-tab">
+                        <div class="col-md-12">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="product-image" style="background-image: url(images/tabimg4.jpg);background-size: cover;"></div>
+                                </div>
+
+                                <div class="text-content col-md-6 bg-Peach p-5">
+                                    <h3 class="mb-4">
+                                        Our Heritage
+                                    </h3>
+                                    <p>
+                                        Our shop has deep roots in the art of ice cream making. Passed down through generations, our family's commitment to creating the perfect ice cream has never wavered. It's a tradition we're proud to share with you, our valued customers.
+                                    </p>
+
+                                    <a asp-controller="Home" asp-action="About" class="btn-hvr-effects">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--content-->
+                    </div><!--tab-pane-->
+
+                    <div class="tab-pane fade" role="tabpanel" id="nav-values" aria-labelledby="nav-values-tab">
+                        <div class="col-md-12">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="product-image" style="background-image: url(images/tabimg2.jpg);background-size: cover;"></div>
+                                </div>
+
+                                <div class="text-content col-md-6 bg-Peach p-5">
+                                    <h3 class="mb-4">
+                                    Unique Flavors
+                                </h3>
+                                <p>What sets us apart is our dedication to flavor innovation. We believe in pushing the boundaries of taste, which is why our menu is a delightful blend of classic favorites and imaginative new creations. From rich and creamy classics to daring, unexpected flavors, there's always a delightful surprise waiting in our display case.</p>
+                                    <div class="pix_btn mt-4">
+                                    <a asp-controller="Home" asp-action="About" class="btn-hvr-effects">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--col-md-12-->
+                    </div><!--tab-panel-->
+
+                    <div class="tab-pane fade" role="tabpanel" id="nav-goals" aria-labelledby="nav-goals-tab">
+                        <div class="col-md-12">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="product-image" style="background-image: url(images/tabimg3.jpg);background-size: cover;"></div>
+                                </div>
+
+                                <div class="text-content col-md-6 bg-Peach p-5">
+                                    <h3 class="mb-4">
+                                    Community and Sustainability
+                                </h3>
+                                <p>We're not just an ice cream shop we're an integral part of the community we serve. We take pride in giving back, whether it's through supporting local charities, hosting community events, or simply being a place where friends and families gather. Our commitment to sustainability means we also care deeply about our environment, striving to minimize our footprint while maximizing the joy we bring to your taste buds.</p>
+                                    <div class="pix_btn mt-4">
+                                    <a asp-controller="Home" asp-action="About" class="btn-hvr-effects">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--content-->
+                    </div><!--tab-panel-->
+
+                </div><!--tab-content-->
+
+            </div><!---with-nav-tabs--->
+        </div>
+    </div>
+
+</section>
+
+<section class="best-products margin-large">
+    <div class="container">
+        <h2 class="section-title text-center mb-4">Best Products</h2>
+        <div class="row">
+            <div class="d-flex products-slider">
+                @foreach (var item in Model) {
+                <div class="product-item col-md-3 pl-0">
+                    <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Id" class="product-image"><img src="~/images/@item.Image_URL"></a>
+                    <div class="text-comtent text-center text-hover">
+                        <h5 class="pt-4"><a asp-controller="Home" asp-action="Details" asp-route-id="@item.Id">@item.Name</a></h5>
+                        <span class="price colored">@item.Price$</span>
+                    </div>
+                </div>
+                }
+               @* <div class="product-item col-md-3 pl-0">
+                    <a asp-controller="Home" asp-action="Details" asp-route-id="3" class="product-image"><img src="images/c.png"></a>
+                    <div class="text-comtent text-center text-hover">
+                        <h5 class="pt-4"><a asp-controller="Home" asp-action="Details" asp-route-id="3">VANILLA STRABERRY</a></h5>
+                        <span class="price colored">15$</span>
+                    </div>
+                </div>
+                <div class="product-item col-md-3 pl-0">
+                    <a asp-controller="Home" asp-action="Details" asp-route-id="5" class="product-image"><img src="images/e.png"></a>
+                    <div class="text-comtent text-center text-hover">
+                        <h5 class="pt-4"><a asp-controller="Home" asp-action="Details" asp-route-id="5">PITACHIO</a></h5>
+                        <span class="price colored">7$</span>
+                    </div>
+                </div>
+                <div class="product-item col-md-3 pl-0">
+                    <a asp-controller="Home" asp-action="Details" asp-route-id="7" class="product-image"><img src="images/g.png"></a>
+                    <div class="text-comtent text-center text-hover">
+                        <h5 class="pt-4"><a asp-controller="Home" asp-action="Details" asp-route-id="7">SALTED CARAMEL SOY</a></h5>
+                        <span class="price colored">15$</span>
+                    </div>
+                </div>*@
+
+            </div><!--slider-->
+        </div>
+    </div>
+</section>
+
+
+<section class="special-items mb-5">
+    <div class="item-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 color-white">
+                    <h2 class="section-title color-white mb-4">
+                        Our special chocolate ice cream
+                    </h2>
+                    <p>All of our products are made from scratch using family recipes with the highest quality ingredients, to ensure only the best products are sold to our customers.</p>
+
+                    <div class="pix_btn mt-4">
+                        <a asp-action="Shop" class="btn btn-outline-light">
+                            <span>Shop Now</span>
+                        </a>
+                    </div>
+                </div><!--item-content-->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="gallery-wrap margin-medium">
+    <div class="container">
+        <h2 class="section-title mb-5 text-center">View Our Gallery</h2>
+        <div class="row">
+            <div class="d-flex flex-wrap col-md-12">
+                <figure class="col-md-4 mb-3 pl-0">
+                    <a class="magnific-popup" href="images/a.png">
+                        <img src="images/a.png" alt="cake" class="galleryImg">
+                        <div class="overlay">
+                            <i class="icon icon-search-plus"></i>
+                        </div><!--imgOverlay-->
+                    </a>
+                </figure>
+                <figure class="col-md-4 mb-3 pl-0">
+                    <a class="magnific-popup" href="images/b.png">
+                        <img src="images/b.png" alt="cake" class="galleryImg">
+                        <div class="overlay">
+                            <i class="icon icon-search-plus"></i>
+                        </div><!--imgOverlay-->
+                    </a>
+                </figure>
+                <figure class="col-md-4 mb-3 pl-0">
+                    <a class="magnific-popup" href="images/c.png">
+                        <img src="images/c.png" alt="cake" class="galleryImg">
+                        <div class="overlay">
+                            <i class="icon icon-search-plus"></i>
+                        </div><!--imgOverlay-->
+                    </a>
+                </figure>
+                <figure class="col-md-4 mb-3 pl-0">
+                    <a class="magnific-popup" href="images/d.png">
+                        <img src="images/d.png" alt="cake" class="galleryImg">
+                        <div class="overlay">
+                            <i class="icon icon-search-plus"></i>
+                        </div><!--imgOverlay-->
+                    </a>
+                </figure>
+                <figure class="col-md-4 mb-3 pl-0">
+                    <a class="magnific-popup" href="images/e.png">
+                        <img src="images/e.png" alt="cake" class="galleryImg">
+                        <div class="overlay">
+                            <i class="icon icon-search-plus"></i>
+                        </div><!--imgOverlay-->
+                    </a>
+                </figure>
+                <figure class="col-md-4 mb-3 pl-0">
+                    <a class="magnific-popup" href="images/f.png">
+                        <img src="images/f.png" alt="cake" class="galleryImg">
+                        <div class="overlay">
+                            <i class="icon icon-search-plus"></i>
+                        </div><!--imgOverlay-->
+                    </a>
+                </figure>
+            </div><!--content-->
+            <div class="pix_btn text-center m-auto">
+                <a asp-controller="Home" asp-action="Shop" class="btn-hvr-effects mt-3">View All</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="testimonials-wrap padding-medium">
+    <div class="container">
+        <div class="row">
+            <div class="reviews-content col-md-12 light text-center">
+                <h2 class="section-title">Testimonials</h2>
+
+                <div class="testimonial-slider">
+                    <div class="testimonials-inner">
+                        <div class="rating padding-small">
+                            <i class="icon icon-star"></i>
+                            <i class="icon icon-star"></i>
+                            <i class="icon icon-star"></i>
+                            <i class="icon icon-star"></i>
+                            <i class="icon icon-star"></i>
+                        </div>
+                        <p class="animated zoomIn">"Your ice cream shop is a wonderful place to enjoy excellent flavors! The fresh and creamy ice cream you offer is unforgettable. The friendly service and pleasant atmosphere add to the experience. Thank you!"</p>
+                        <div class="testimonial-author">
+                            @* <img src="images/default.png" alt="jane"> *@
+                            <span class="name d-flex justify-content-center mt-3">Jane Marie</span>
+                        </div>
+                    </div><!--reviews-info-->
+
+                    <div class="testimonials-inner">
+                        <div class="rating padding-small">
+                            <i class="icon icon-star"></i>
+                            <i class="icon icon-star"></i>
+                            <i class="icon icon-star"></i>
+                            <i class="icon icon-star"></i>
+                            <i class="icon icon-star"></i>
+                        </div>
+                        <p class="animated zoomIn">"Your shop is one of my favorites. The unique and heavenly flavors you offer, like the special vanilla, are simply fantastic. I recommend to anyone looking to enjoy outstanding ice cream to visit you!"</p>
+                        <div class="testimonial-author">
+                            @* <img src="images/default.png" alt="simran"> *@
+                            <span class="name d-flex justify-content-center mt-3">Simran</span>
+                        </div>
+                    </div><!--reviews-info-->
+
+                    <div class="testimonials-inner">
+                        <div class="rating padding-small">
+                            <i class="icon icon-star"></i>
+                            <i class="icon icon-star"></i>
+                            <i class="icon icon-star"></i>
+                            <i class="icon icon-star"></i>
+                            <i class="icon icon-star"></i>
+                        </div>
+                        <p class="animated zoomIn">“"The ice cream comes in various shapes and flavors, and every time I walk in, I feel at home. It's the perfect place to create enjoyable family memories."</p>
+                        <div class="testimonial-author">
+                           @*  <img src="images/default.png" alt="jane"> *@
+                            <span class="name d-flex justify-content-center mt-3">John</span>
+                        </div>
+                    </div><!--reviews-info-->
+
+                </div><!--testimonial-slider-->
+
+
+            </div><!--col-md-12-->
+        </div>
+    </div>
+</section>
+
+@* <section class="latest-blogs margin-medium">
+    <h2 class="section-title text-center mb-5">Latest Blogs</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 left-post pl-0 mb-3">
+                <div class="post-content">
+                    <a href="single-post.html"><img src="images/postImg1.jpg" alt="cake" class="largeImg"></a>
+                    <div class="content light">
+                        <span class="highlight">March 10, 2020</span>
+                        <h3 class="mt-3"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 right-post pl-0">
+                <div class="post-content mb-3">
+                    <a href="single-post.html"><img src="images/postLong.jpg" alt="cake" class="horizontalImg"></a>
+                    <div class="content light">
+                        <span class="highlight">March 10, 2020</span>
+                        <h3 class="mt-3"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h3>
+                    </div>
+                </div><!--post-->
+
+                <div class="post-content">
+                    <a href="single-post.html"><img src="images/postLong.jpg" alt="cake" class="horizontalImg"></a>
+                    <div class="content light">
+                        <span class="highlight">March 10, 2020</span>
+                        <h3 class="mt-3"><a href="single-post.html">How to Make a Cake with Great Delicious Chocolate</a></h3>
+                    </div>
+                </div><!--post-->
+            </div>
+        </div>
+    </div>
+
+    <div class="pix_btn text-center">
+        <a href="#" class="btn-hvr-effects mt-5">read more</a>
+    </div>
+</section> *@
+
+<section class="association-with bg-prim padding-small">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="d-flex list-unstyled justify-content-between flex-wrap">
+                    <li><a href="#"><img src="images/ice-cream-shop.png" class="brandImg"></a></li>
+                    <li><a href="#"><img src="images/icecream2.png" class="brandImg"></a></li>
+                    <li><a href="#"><img src="images/icecream1.png" class="brandImg"></a></li>
+                    <li><a href="#"><img src="images/ice-cream-shop2.png" class="brandImg"></a></li>
+                    <li><a href="#"><img src="images/signal.png" class="brandImg"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+

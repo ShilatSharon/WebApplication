@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplicationIceCreamProject</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplicationIceCreamProject.styles.css" asp-append-version="true" />
+ <style>
+        /* Change the color of links to pink */
+        a {
+            color: #ce3c83;
+            transition: color 0.3s; /* Add a smooth color transition effect */
+        }
+
+        /* Change the background color of buttons to pink */
+        .btn {
+            background-color: #ce3c83;
+            color: white; /* Change text color to white for better visibility */
+            transition: background-color 0.3s, color 0.3s; /* Add smooth transition effects */
+            border: 2px solid transparent; /* Add a transparent border */
+        }
+
+        /* Change link color to pink when hovering */
+        a:hover {
+            color: #FF9AA2; /* Change to your desired pink color */
+            border-color: #FF9AA2; /* Change border color to pink when hovering */
+        }
+
+        /* Change button color to pink when hovering */
+        .btn:hover {
+            background-color: #FF9AA2; /* Change to your desired pink color */
+            color: white; /* You can keep the text color as white */
+            border-color: #FF9AA2; /* Change border color to pink when hovering */
+        }
+
+        
+        body {
+            background-color: #FFD1DC; /* Change to your desired pink color */
+        }
+
+        .header {
+            background-color: #FF9AA2; /* Change to your desired pink color */
+        }
+    </style>
+    </head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                @*<a class="navbar-brand" asp-area="" asp-controller="Admin" asp-action="Index">Home</a>*@
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
